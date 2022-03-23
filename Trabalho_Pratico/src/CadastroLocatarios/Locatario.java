@@ -34,4 +34,20 @@ public class Locatario {
 	public void setEnd(Endereco end) {
 		this.end = end;
 	}
+	
+	public void cadastrar() {
+		
+	}
+	
+	public boolean pesquisar() {
+		return true;
+	}
+	
+	public void alterar() {
+		
+	}
+	
+	public void excluir() {
+		
+	}
 }

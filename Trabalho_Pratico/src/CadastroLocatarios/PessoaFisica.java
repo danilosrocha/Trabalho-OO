@@ -32,19 +32,4 @@ public class PessoaFisica extends Locatario{
 		this.estadoCivil = estadoCivil;
 	}
 	
-	public void cadastrar() {
-		
-	}
-	
-	public boolean pesquisar(String nome, String cpf) {
-		return true;
-	}
-	
-	public void alterar() {
-		
-	}
-	
-	public void excluir() {
-		
-	}
 }

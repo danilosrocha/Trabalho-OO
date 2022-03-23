@@ -37,20 +37,4 @@ public class PessoaJuridica extends Locatario{
 		this.funcionario = funcionario;
 	}
 	
-	public void cadastrar() {
-		
-	}
-	
-	public boolean pesquisar(String nome, String cnpj) {
-		return true;
-	}
-	
-	public void alterar() {
-		
-	}
-	
-	public void excluir() {
-		
-	}
-	
 }
