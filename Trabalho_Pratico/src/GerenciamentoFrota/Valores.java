@@ -6,6 +6,16 @@ public class Valores {
 	private float diariaEmpresarial;
 	private float valorMensal;
 	
+	public Valores() {
+	
+	}
+	public Valores(float diariaNormal, float diariaReduzida, float diariaEmpresarial, float valorMensal) {
+		super();
+		this.diariaNormal = diariaNormal;
+		this.diariaReduzida = diariaReduzida;
+		this.diariaEmpresarial = diariaEmpresarial;
+		this.valorMensal = valorMensal;
+	}
 	public float getDiariaNormal() {
 		return diariaNormal;
 	}
@@ -30,7 +40,5 @@ public class Valores {
 	public void setValorMensal(float valorMensal) {
 		this.valorMensal = valorMensal;
 	}
-	
-	
 	
 }
