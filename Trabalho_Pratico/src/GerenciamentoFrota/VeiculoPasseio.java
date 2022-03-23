@@ -4,6 +4,13 @@ public class VeiculoPasseio extends Veiculo {
 	private String categoria;
 	private String itensOpcionais;
 	
+	public VeiculoPasseio(String marca, String modelo, String anoFabricacao, String numeroFabricacao,
+			float capacidadeTanque, String categoria, String itensOpcionais) {
+		super(marca, modelo, anoFabricacao, numeroFabricacao, capacidadeTanque);
+		this.categoria = categoria;
+		this.itensOpcionais = itensOpcionais;
+	}
+	
 	public String getCategoria() {
 		return categoria;
 	}
