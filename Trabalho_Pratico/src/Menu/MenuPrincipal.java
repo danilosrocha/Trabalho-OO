@@ -21,7 +21,7 @@ public class MenuPrincipal {
 				System.out.println("Menu Gerência de Locatários:");
 				System.out.println("A) Cadastrar Locatário");
 				System.out.println("B) Buscar Locatário");
-				System.out.println("C) Pesquisar Locatário");
+				System.out.println("C) Atualizar dados do locatário");
 				System.out.println("D) Excluir locatário");
 				break;
 				
