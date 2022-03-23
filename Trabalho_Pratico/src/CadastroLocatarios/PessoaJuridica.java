@@ -41,8 +41,8 @@ public class PessoaJuridica extends Locatario{
 		
 	}
 	
-	public void buscar() {
-		
+	public boolean pesquisar(String nome, String cnpj) {
+		return true;
 	}
 	
 	public void atualizar() {

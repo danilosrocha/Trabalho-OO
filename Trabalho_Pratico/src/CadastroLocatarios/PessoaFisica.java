@@ -36,11 +36,11 @@ public class PessoaFisica extends Locatario{
 		
 	}
 	
-	public void buscar() {
-		
+	public boolean pesquisar(String nome, String cpf) {
+		return true;
 	}
 	
-	public void atualizar() {
+	public void alterar() {
 		
 	}
 	
