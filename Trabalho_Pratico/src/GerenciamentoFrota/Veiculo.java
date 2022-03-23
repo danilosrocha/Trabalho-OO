@@ -7,6 +7,7 @@ public class Veiculo {
 	private String marca;
 	private String modelo;
 	private String anoFabricacao;
+	private String anoModelo;
 	private String numeroFabricacao;
 	private float capacidadeTanque;
 	
@@ -28,6 +29,14 @@ public class Veiculo {
 	public void setMarca(String marca) {
 		this.marca = marca;
 	}
+	public String getAnoModelo() {
+		return anoModelo;
+	}
+
+	public void setAnoModelo(String anoModelo) {
+		this.anoModelo = anoModelo;
+	}
+
 	public String getModelo() {
 		return modelo;
 	}

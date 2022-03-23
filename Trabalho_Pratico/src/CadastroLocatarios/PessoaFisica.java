@@ -1,4 +1,4 @@
-package CadastroDeLocatarios;
+package CadastroLocatarios;
 
 public class PessoaFisica extends Locatario{
 	private String nomeCompleto;

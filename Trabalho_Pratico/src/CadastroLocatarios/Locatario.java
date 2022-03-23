@@ -1,4 +1,4 @@
-package CadastroDeLocatarios;
+package CadastroLocatarios;
 
 public class Locatario {
 	private String email;
