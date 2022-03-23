@@ -5,6 +5,14 @@ public class VeiculoCarga extends VeiculosUtilitarios{
 	private String taraVeiculo;
 	private String compartimentoCarga;
 	
+	public VeiculoCarga(String marca, String modelo, String anoFabricacao, String numeroFabricacao,
+			float capacidadeTanque, String tipoUtilitario, String itensOpcionais, float capacidadeCarga,
+			String taraVeiculo, String compartimentoCarga) {
+		super(marca, modelo, anoFabricacao, numeroFabricacao, capacidadeTanque, tipoUtilitario, itensOpcionais);
+		this.capacidadeCarga = capacidadeCarga;
+		this.taraVeiculo = taraVeiculo;
+		this.compartimentoCarga = compartimentoCarga;
+	}
 	public float getCapacidadeCarga() {
 		return capacidadeCarga;
 	}
