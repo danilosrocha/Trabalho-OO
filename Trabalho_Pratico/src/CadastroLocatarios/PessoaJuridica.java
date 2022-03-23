@@ -45,7 +45,7 @@ public class PessoaJuridica extends Locatario{
 		return true;
 	}
 	
-	public void atualizar() {
+	public void alterar() {
 		
 	}
 	
