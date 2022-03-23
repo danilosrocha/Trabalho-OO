@@ -1,4 +1,4 @@
-package CadastroDeLocatarios;
+package CadastroLocatarios;
 
 public class Endereco {
 	private String rua;
