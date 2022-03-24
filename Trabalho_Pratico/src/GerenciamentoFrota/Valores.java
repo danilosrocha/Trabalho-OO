@@ -16,6 +16,7 @@ public class Valores {
 		this.diariaEmpresarial = diariaEmpresarial;
 		this.valorMensal = valorMensal;
 	}
+	
 	public float getDiariaNormal() {
 		return diariaNormal;
 	}

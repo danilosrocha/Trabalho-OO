@@ -70,7 +70,7 @@ public class Veiculo {
 		
 	}
 	
-	public void atualizar() {
+	public void alterar() {
 		
 	}
 	
