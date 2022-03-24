@@ -20,8 +20,8 @@ public class MenuPrincipal {
 			case "A":
 				System.out.println("Menu Gerência de Locatários:");
 				System.out.println("A) Cadastrar Locatário");
-				System.out.println("B) Buscar Locatário");
-				System.out.println("C) Atualizar dados do locatário");
+				System.out.println("B) Pesquisar Locatário");
+				System.out.println("C) Alterar dados do locatário");
 				System.out.println("D) Excluir locatário");
 				break;
 				
@@ -29,7 +29,7 @@ public class MenuPrincipal {
 				System.out.println("Menu Gerência de Frotas:");
 				System.out.println("A) Cadastrar veículos");
 				System.out.println("B) Pesquisar Veículo");
-				System.out.println("C) Atualizar dados de um veículo");
+				System.out.println("C) Alterar dados de um veículo");
 				System.out.println("D) Remover veículo da frota");
 				String entrada2 = leitor.next();
 				switch(entrada2) {
@@ -37,7 +37,7 @@ public class MenuPrincipal {
 						System.out.println("Menu de Cadastro de Veículos: ");
 						System.out.println("A) Cadastrar veiculo de passeio");
 						System.out.println("B) Cadastrar veículo utilitário");
-						System.out.println("C) Cadastrar Motocicleta");
+						System.out.println("C) Cadastrar motocicleta");
 						break;
 						
 					case "B":
