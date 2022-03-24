@@ -5,10 +5,10 @@ public class VeiculoCarga extends VeiculosUtilitarios{
 	private String taraVeiculo;
 	private CompartimentoCarga compartimentoCarga;
 	
-	public VeiculoCarga(String marca, String modelo, String anoFabricacao, String numeroFabricacao,
+	public VeiculoCarga(String marca, String modelo, String anoFabricacao, String numeroCadastro,
 		float capacidadeTanque, String tipoUtilitario, String itensOpcionais, float capacidadeCarga,
 			String taraVeiculo, CompartimentoCarga compartimentoCarga,Valores valores) {
-		super(marca, modelo, anoFabricacao, numeroFabricacao, capacidadeTanque, tipoUtilitario, itensOpcionais,valores);
+		super(marca, modelo, anoFabricacao, numeroCadastro, capacidadeTanque, tipoUtilitario, itensOpcionais,valores);
 		this.capacidadeCarga = capacidadeCarga;
 		this.taraVeiculo = taraVeiculo;
 		this.compartimentoCarga = compartimentoCarga;

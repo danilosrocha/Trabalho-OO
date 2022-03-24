@@ -8,7 +8,7 @@ public class Veiculo {
 	private String modelo;
 	private String anoFabricacao;
 	private String anoModelo;
-	private String numeroFabricacao;
+	private String numeroCadastro;
 	private float capacidadeTanque;
 	private Valores valores;
 	
@@ -16,11 +16,11 @@ public class Veiculo {
 		
 	}
 	
-	public Veiculo(String marca, String modelo, String anoFabricacao, String numeroFabricacao, float capacidadeTanque,Valores valores) {
+	public Veiculo(String marca, String modelo, String anoFabricacao, String numeroCadastro, float capacidadeTanque, Valores valores) {
 		this.marca = marca;
 		this.modelo = modelo;
 		this.anoFabricacao = anoFabricacao;
-		this.numeroFabricacao = numeroFabricacao;
+		this.numeroCadastro = numeroCadastro;
 		this.capacidadeTanque = capacidadeTanque;
 		this.valores = valores;	
 	}
@@ -51,11 +51,11 @@ public class Veiculo {
 	public void setAnoFabricacao(String anoFabricacao) {
 		this.anoFabricacao = anoFabricacao;
 	}
-	public String getNumeroFabricacao() {
-		return numeroFabricacao;
+	public String getNumeroCadastro() {
+		return numeroCadastro;
 	}
-	public void setNumeroFabricacao(String numeroFabricacao) {
-		this.numeroFabricacao = numeroFabricacao;
+	public void setNumeroCadastro(String numeroCadastro) {
+		this.numeroCadastro = numeroCadastro;
 	}
 	public float getCapacidadeTanque() {
 		return capacidadeTanque;
@@ -64,12 +64,20 @@ public class Veiculo {
 		this.capacidadeTanque = capacidadeTanque;
 	}
 	
+	public Valores getValores() {
+		return valores;
+	}
+
+	public void setValores(Valores valores) {
+		this.valores = valores;
+	}
+
 	public void cadastrar() {
 		
 	}
 	
-	public void pesquisar(String numeroCadastro) {
-		
+	public boolean pesquisar(String numeroCadastro) {
+		return true;
 	}
 	
 	public void alterar() {

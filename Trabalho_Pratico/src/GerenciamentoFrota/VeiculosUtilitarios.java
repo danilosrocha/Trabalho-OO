@@ -4,9 +4,9 @@ public class VeiculosUtilitarios extends Veiculo{
 	private String tipoUtilitario;
 	private String itensOpcionais;
 	
-	public VeiculosUtilitarios(String marca, String modelo, String anoFabricacao, String numeroFabricacao,
+	public VeiculosUtilitarios(String marca, String modelo, String anoFabricacao, String numeroCadastro,
 		float capacidadeTanque, String tipoUtilitario, String itensOpcionais,Valores valores) {
-		super(marca, modelo, anoFabricacao, numeroFabricacao, capacidadeTanque,valores);
+		super(marca, modelo, anoFabricacao, numeroCadastro, capacidadeTanque,valores);
 		this.tipoUtilitario = tipoUtilitario;
 		this.itensOpcionais = itensOpcionais;
 	}
