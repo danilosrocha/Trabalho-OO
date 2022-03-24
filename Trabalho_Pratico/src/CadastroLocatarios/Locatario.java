@@ -8,7 +8,7 @@ public class Locatario {
 	public Locatario(String email, String celular, Endereco end) {
 		this.email = email;
 		this.celular = celular;
-		this.endereco = end;
+		this.endereco = endereco;
 	}
 
 	public String getEmail() {
@@ -27,12 +27,12 @@ public class Locatario {
 		this.celular = celular;
 	}
 
-	public Endereco getEnd() {
+	public Endereco getEndereco() {
 		return endereco;
 	}
 
-	public void setEnd(Endereco end) {
-		this.endereco = end;
+	public void setEndereco(Endereco endereco) {
+		this.endereco = endereco;
 	}
 	
 	public void cadastrar() {

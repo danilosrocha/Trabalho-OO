@@ -4,8 +4,8 @@ public class Motocicleta extends Veiculo {
 	private String itensOpcionais;
 	
 	public Motocicleta(String marca, String modelo, String anoFabricacao, String numeroFabricacao,
-			float capacidadeTanque, String itensOpcionais) {
-		super(marca, modelo, anoFabricacao, numeroFabricacao, capacidadeTanque);
+			float capacidadeTanque, String itensOpcionais,Valores valores) {
+		super(marca, modelo, anoFabricacao, numeroFabricacao, capacidadeTanque,valores);
 		this.itensOpcionais = itensOpcionais;
 	}
 
