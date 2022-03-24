@@ -3,12 +3,12 @@ package CadastroLocatarios;
 public class Locatario {
 	private String email;
 	private String celular;
-	private Endereco end;
+	private Endereco endereco;
 	
 	public Locatario(String email, String celular, Endereco end) {
 		this.email = email;
 		this.celular = celular;
-		this.end = end;
+		this.endereco = end;
 	}
 
 	public String getEmail() {
@@ -28,11 +28,11 @@ public class Locatario {
 	}
 
 	public Endereco getEnd() {
-		return end;
+		return endereco;
 	}
 
 	public void setEnd(Endereco end) {
-		this.end = end;
+		this.endereco = end;
 	}
 	
 	public void cadastrar() {
