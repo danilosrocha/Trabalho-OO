@@ -5,7 +5,7 @@ public class Locatario {
 	private String celular;
 	private Endereco endereco;
 	
-	public Locatario(String email, String celular, Endereco end) {
+	public Locatario(String email, String celular, Endereco endereco) {
 		this.email = email;
 		this.celular = celular;
 		this.endereco = endereco;

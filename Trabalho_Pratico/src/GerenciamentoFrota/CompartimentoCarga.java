@@ -29,5 +29,5 @@ public class CompartimentoCarga {
 	public void setVolume(float volume) {
 		this.volume = volume;
 	}
-
+	
 }
