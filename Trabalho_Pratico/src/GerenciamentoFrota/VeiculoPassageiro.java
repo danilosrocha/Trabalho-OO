@@ -4,8 +4,8 @@ public class VeiculoPassageiro extends VeiculosUtilitarios{
 	private int quantidadeOcupantes;
 	
 	public VeiculoPassageiro(String marca, String modelo, String anoFabricacao, String numeroFabricacao,
-			float capacidadeTanque, String tipoUtilitario, String itensOpcionais, int quantidadeOcupantes) {
-		super(marca, modelo, anoFabricacao, numeroFabricacao, capacidadeTanque, tipoUtilitario, itensOpcionais);
+			float capacidadeTanque, String tipoUtilitario, String itensOpcionais, int quantidadeOcupantes,Valores valores) {
+		super(marca, modelo, anoFabricacao, numeroFabricacao, capacidadeTanque, tipoUtilitario, itensOpcionais,valores);
 		this.quantidadeOcupantes = quantidadeOcupantes;
 	}
 

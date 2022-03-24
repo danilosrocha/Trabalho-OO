@@ -5,9 +5,9 @@ public class PessoaFisica extends Locatario{
 	private String cpf;
 	private String estadoCivil;
 	
-	public PessoaFisica(String email, String celular, Endereco end, String nomeCompleto, String cpf,
+	public PessoaFisica(String email, String celular, Endereco endereco, String nomeCompleto, String cpf,
 			String estadoCivil) {
-		super(email, celular, end);
+		super(email, celular, endereco);
 		this.nomeCompleto = nomeCompleto;
 		this.cpf = cpf;
 		this.estadoCivil = estadoCivil;

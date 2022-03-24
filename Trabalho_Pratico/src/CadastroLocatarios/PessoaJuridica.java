@@ -5,9 +5,9 @@ public class PessoaJuridica extends Locatario{
 	private String cnpj;
 	private PessoaFisica funcionario;
 	
-	public PessoaJuridica(String email, String celular, Endereco end, String nomeSocial, String cnpj,
+	public PessoaJuridica(String email, String celular, Endereco endereco, String nomeSocial, String cnpj,
 			PessoaFisica funcionario) {
-		super(email, celular, end);
+		super(email, celular, endereco);
 		this.nomeSocial = nomeSocial;
 		this.cnpj = cnpj;
 		this.funcionario = funcionario;

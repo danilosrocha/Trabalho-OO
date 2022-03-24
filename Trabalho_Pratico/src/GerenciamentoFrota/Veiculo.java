@@ -10,17 +10,19 @@ public class Veiculo {
 	private String anoModelo;
 	private String numeroFabricacao;
 	private float capacidadeTanque;
+	private Valores valores;
 	
 	public Veiculo() {
 		
 	}
 	
-	public Veiculo(String marca, String modelo, String anoFabricacao, String numeroFabricacao, float capacidadeTanque) {
+	public Veiculo(String marca, String modelo, String anoFabricacao, String numeroFabricacao, float capacidadeTanque,Valores valores) {
 		this.marca = marca;
 		this.modelo = modelo;
 		this.anoFabricacao = anoFabricacao;
 		this.numeroFabricacao = numeroFabricacao;
 		this.capacidadeTanque = capacidadeTanque;
+		this.valores = valores;	
 	}
 	
 	public String getMarca() {
