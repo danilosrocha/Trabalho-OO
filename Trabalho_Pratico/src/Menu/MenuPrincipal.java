@@ -1,60 +1,106 @@
 package Menu;
 
-import java.util.Scanner;
+import javax.swing.JOptionPane;
 
 public class MenuPrincipal {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		Scanner leitor = new Scanner(System.in);
+		String entrada;
+		do {
+			entrada = JOptionPane.showInputDialog("Menu Principal" + "\n" + 
+										"A) Gerenciar Locatários" + "\n" +
+										"B) Gerenciar Frota" + "\n" + 
+										"C) Gerenciar Reservas" + "\n" + 
+										"D) Sair do Programa");
+			
+			entrada = entrada.toUpperCase();
 		
-		System.out.println("Menu Principal:");
-		System.out.println("A) Gerenciar Locatários");
-		System.out.println("B) Gerenciar Frota");
-		System.out.println("C) Gerenciar Reservas");
-		System.out.println("D) Sair do Programa");
-		String entrada = leitor.next();
-		
-		switch(entrada) {
-			case "A":
-				System.out.println("Menu Gerência de Locatários:");
-				System.out.println("A) Cadastrar Locatário");
-				System.out.println("B) Pesquisar Locatário");
-				System.out.println("C) Alterar dados do locatário");
-				System.out.println("D) Excluir locatário");
-				break;
-				
-			case "B":
-				System.out.println("Menu Gerência de Frotas:");
-				System.out.println("A) Cadastrar veículos");
-				System.out.println("B) Pesquisar Veículo");
-				System.out.println("C) Alterar dados de um veículo");
-				System.out.println("D) Remover veículo da frota");
-				String entrada2 = leitor.next();
-				switch(entrada2) {
-					case "A":
-						System.out.println("Menu de Cadastro de Veículos: ");
-						System.out.println("A) Cadastrar veiculo de passeio");
-						System.out.println("B) Cadastrar veículo utilitário");
-						System.out.println("C) Cadastrar motocicleta");
-						break;
-						
-					case "B":
-						System.out.println("Menu de Pesquisa de Veículos: ");
-						System.out.println("A) Pesquisar veículo pelo Renavam");
-						System.out.println("B) Pesquisar veículo por marca, modelo ou renavam");
-						break;
-				}
-				
-			case "C":
-				System.out.println("C) Gerenciar Reservas");
-				break;
-			case "D":
-				System.out.println("D) Sair do Programa");
-				break;
-		}
+			switch(entrada) {
+				case "A":
+					String entrada_A = JOptionPane.showInputDialog("Menu Gerência de locatários:" + "\n" + 
+													"A) Cadastrar locatário" + "\n" +
+													"B) Pesquisar locatário" + "\n" + 
+													"C) Alterar dados do locatário" + "\n" + 
+													"D) Excluir locatário");
+					
+					entrada_A = entrada_A.toUpperCase();
+					
+					switch(entrada_A) {
+						case "A":
+							JOptionPane.showMessageDialog(null, "Locatário cadastrado com sucesso!");
+							break;
+						case "B":
+							JOptionPane.showMessageDialog(null, "Locatário achado com sucesso!");
+							break;
+						case "C":
+							JOptionPane.showMessageDialog(null, "Locatário alterado com sucesso!");
+							break;
+						case "D":
+							JOptionPane.showMessageDialog(null, "Locatário excluido com sucesso!");
+							break;
+					}		
+					break;
+					
+				case "B":
+					String entrada_B = JOptionPane.showInputDialog("Menu Gerência de Frotas:" + "\n" + 
+							"A) Cadastrar veículos" + "\n" +
+							"B) Pesquisar veículo" + "\n" + 
+							"C) Alterar dados de um veículo" + "\n" + 
+							"D) Remover veículo da frota");
 	
+					entrada_B = entrada_B.toUpperCase();
+					
+					switch(entrada_B) {
+						case "A":
+							String entrada_BA = JOptionPane.showInputDialog("Menu de Cadastro de Veículos: " + "\n" + 
+									"A) Cadastrar veiculo de passeio" + "\n" +
+									"B) Cadastrar veículo utilitário" + "\n" + 
+									"C) Cadastrar motocicleta");
+							entrada_BA = entrada_BA.toUpperCase();
+							
+							switch(entrada_BA) {
+								case "A":
+									JOptionPane.showMessageDialog(null, "Veiculo de passeio cadastrado com sucesso!");
+									break;
+								case "B":
+									JOptionPane.showMessageDialog(null, "Veiculo utilitário cadastrado com sucesso!");
+									break;
+								case "C":
+									JOptionPane.showMessageDialog(null, "Motocicleta cadastrada com sucesso!");
+									break;
+							}
+							break;
+						case "B":
+							String entrada_BB = JOptionPane.showInputDialog("Menu de Pesquisa de Veículos: " + "\n" + 
+									"A) Pesquisar veículo pelo Renavam" + "\n" +
+									"B) Pesquisar veículo por marca, modelo ou renavam");
+							entrada_BB = entrada_BB.toUpperCase();
+							
+							switch(entrada_BB) {
+								case "A":
+									JOptionPane.showMessageDialog(null, "Pesquisa pelo Renavam realizada com sucesso!");
+									break;
+								case "B":
+									JOptionPane.showMessageDialog(null, "Pesquisa pela marca realizada com sucesso!");
+									break;
+							}		
+							break;
+					}
+					break;
+					
+				case "C":
+					JOptionPane.showMessageDialog(null, "Gerenciar Reserva");
+					break;
+				case "D":
+					JOptionPane.showMessageDialog(null, "Obrigado por utilizar a plataforma");
+					entrada = "D";
+					break;
+				default:
+					JOptionPane.showMessageDialog(null, "Opção inválida\nReinicie a Plataforma\n");
+					break;
+			}
+		} while(entrada != "D");
 	}
-
 }
