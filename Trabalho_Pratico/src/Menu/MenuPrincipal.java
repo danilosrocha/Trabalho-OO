@@ -1,16 +1,18 @@
 package Menu;
 
 import javax.swing.JOptionPane;
+import CadastroLocatarios.GerenciarLocatario;
+import CadastroLocatarios.Locatario;
 
 public class MenuPrincipal {
-
+	static GerenciarLocatario gCadastro = new GerenciarLocatario();
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
 		String entrada;
 		do {
 			entrada = JOptionPane.showInputDialog("Menu Principal" + "\n" + 
-										"A) Gerenciar Locatários" + "\n" +
+										"A) Gerenciar Locatï¿½rios" + "\n" +
 										"B) Gerenciar Frota" + "\n" + 
 										"C) Gerenciar Reservas" + "\n" + 
 										"D) Sair do Programa");
@@ -19,44 +21,55 @@ public class MenuPrincipal {
 		
 			switch(entrada) {
 				case "A":
-					String entrada_A = JOptionPane.showInputDialog("Menu Gerência de locatários:" + "\n" + 
-													"A) Cadastrar locatário" + "\n" +
-													"B) Pesquisar locatário" + "\n" + 
-													"C) Alterar dados do locatário" + "\n" + 
-													"D) Excluir locatário");
+					String entrada_A = JOptionPane.showInputDialog("Menu Gerï¿½ncia de locatï¿½rios:" + "\n" + 
+													"A) Cadastrar locatï¿½rio" + "\n" +
+													"B) Pesquisar locatï¿½rio" + "\n" + 
+													"C) Alterar dados do locatï¿½rio" + "\n" + 
+													"D) Excluir locatï¿½rio");
 					
 					entrada_A = entrada_A.toUpperCase();
 					
 					switch(entrada_A) {
 						case "A":
-							JOptionPane.showMessageDialog(null, "Locatário cadastrado com sucesso!");
+							String entrada_AA = JOptionPane.showInputDialog("A) Pessoa fisica:" + "\n" +
+																	"B) Pessoa juridica:");
+							entrada_AA = entrada_AA.toUpperCase();
+							switch(entrada_AA) {
+								case "A":
+									gCadastro.cadastrarPessoaFisica();
+									break;
+								case "B":
+									gCadastro.cadastrarPessoaJuridica();
+									break;	
+								
+							}
 							break;
 						case "B":
-							JOptionPane.showMessageDialog(null, "Locatário achado com sucesso!");
+							gCadastro.pesquisar();
 							break;
 						case "C":
-							JOptionPane.showMessageDialog(null, "Locatário alterado com sucesso!");
+							gCadastro.alterar();
 							break;
 						case "D":
-							JOptionPane.showMessageDialog(null, "Locatário excluido com sucesso!");
+							gCadastro.excluir();
 							break;
 					}		
 					break;
 					
 				case "B":
-					String entrada_B = JOptionPane.showInputDialog("Menu Gerência de Frotas:" + "\n" + 
-							"A) Cadastrar veículos" + "\n" +
-							"B) Pesquisar veículo" + "\n" + 
-							"C) Alterar dados de um veículo" + "\n" + 
-							"D) Remover veículo da frota");
+					String entrada_B = JOptionPane.showInputDialog("Menu Gerï¿½ncia de Frotas:" + "\n" + 
+							"A) Cadastrar veï¿½culos" + "\n" +
+							"B) Pesquisar veï¿½culo" + "\n" + 
+							"C) Alterar dados de um veï¿½culo" + "\n" + 
+							"D) Remover veï¿½culo da frota");
 	
 					entrada_B = entrada_B.toUpperCase();
 					
 					switch(entrada_B) {
 						case "A":
-							String entrada_BA = JOptionPane.showInputDialog("Menu de Cadastro de Veículos: " + "\n" + 
+							String entrada_BA = JOptionPane.showInputDialog("Menu de Cadastro de Veï¿½culos: " + "\n" + 
 									"A) Cadastrar veiculo de passeio" + "\n" +
-									"B) Cadastrar veículo utilitário" + "\n" + 
+									"B) Cadastrar veï¿½culo utilitï¿½rio" + "\n" + 
 									"C) Cadastrar motocicleta");
 							entrada_BA = entrada_BA.toUpperCase();
 							
@@ -65,7 +78,7 @@ public class MenuPrincipal {
 									JOptionPane.showMessageDialog(null, "Veiculo de passeio cadastrado com sucesso!");
 									break;
 								case "B":
-									JOptionPane.showMessageDialog(null, "Veiculo utilitário cadastrado com sucesso!");
+									JOptionPane.showMessageDialog(null, "Veiculo utilitï¿½rio cadastrado com sucesso!");
 									break;
 								case "C":
 									JOptionPane.showMessageDialog(null, "Motocicleta cadastrada com sucesso!");
@@ -73,9 +86,9 @@ public class MenuPrincipal {
 							}
 							break;
 						case "B":
-							String entrada_BB = JOptionPane.showInputDialog("Menu de Pesquisa de Veículos: " + "\n" + 
-									"A) Pesquisar veículo pelo Renavam" + "\n" +
-									"B) Pesquisar veículo por marca, modelo ou renavam");
+							String entrada_BB = JOptionPane.showInputDialog("Menu de Pesquisa de Veï¿½culos: " + "\n" + 
+									"A) Pesquisar veï¿½culo pelo Renavam" + "\n" +
+									"B) Pesquisar veï¿½culo por marca, modelo ou renavam");
 							entrada_BB = entrada_BB.toUpperCase();
 							
 							switch(entrada_BB) {
@@ -98,7 +111,7 @@ public class MenuPrincipal {
 					entrada = "D";
 					break;
 				default:
-					JOptionPane.showMessageDialog(null, "Opção inválida\nReinicie a Plataforma\n");
+					JOptionPane.showMessageDialog(null, "Opï¿½ï¿½o invï¿½lida\nReinicie a Plataforma\n");
 					break;
 			}
 		} while(entrada != "D");

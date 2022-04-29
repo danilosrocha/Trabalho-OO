@@ -1,14 +1,22 @@
 package CadastroLocatarios;
 
-public class Locatario {
+public class Locatario{
 	private String email;
 	private String celular;
 	private Endereco endereco;
+	private String nomeCompleto;
+	private String cpf_cnpj;
 	
-	public Locatario(String email, String celular, Endereco endereco) {
+	public Locatario(String email, String celular, Endereco endereco, String nomeCompleto, String cpf_cnpj) {
 		this.email = email;
 		this.celular = celular;
 		this.endereco = endereco;
+		this.nomeCompleto = nomeCompleto;
+		this.cpf_cnpj = cpf_cnpj;
+	}
+	
+	public Locatario() {
+		
 	}
 
 	public String getEmail() {
@@ -34,20 +42,21 @@ public class Locatario {
 	public void setEndereco(Endereco endereco) {
 		this.endereco = endereco;
 	}
-	
-	public void cadastrar() {
-		
+
+	public String getNomeCompleto() {
+		return nomeCompleto;
+	}
+
+	public void setNomeCompleto(String nomeCompleto) {
+		this.nomeCompleto = nomeCompleto;
+	}
+
+	public String getCpf_cnpj() {
+		return cpf_cnpj;
+	}
+
+	public void setCpf_cnpj(String cpf_cnpj) {
+		this.cpf_cnpj = cpf_cnpj;
 	}
 	
-	public boolean pesquisar() {
-		return true;
-	}
-	
-	public void alterar() {
-		
-	}
-	
-	public void excluir() {
-		
-	}
 }

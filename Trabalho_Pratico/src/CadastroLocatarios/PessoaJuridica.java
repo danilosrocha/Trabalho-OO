@@ -1,39 +1,21 @@
 package CadastroLocatarios;
 
+import java.util.List;
+
 public class PessoaJuridica extends Locatario{
-	private String nomeSocial;
 	private String cnpj;
-	private PessoaFisica funcionario;
+	private List <PessoaFisica> funcionario;
 	
-	public PessoaJuridica(String email, String celular, Endereco endereco, String nomeSocial, String cnpj,
-			PessoaFisica funcionario) {
-		super(email, celular, endereco);
-		this.nomeSocial = nomeSocial;
-		this.cnpj = cnpj;
+	public PessoaJuridica(String email, String celular, Endereco endereco, String nomeCompleto, String cpf_cnpj, List funcionario) {
+		super(email, celular, endereco, nomeCompleto, cpf_cnpj);
 		this.funcionario = funcionario;
 	}
 
-	public String getNomeSocial() {
-		return nomeSocial;
-	}
-
-	public void setNomeSocial(String nomeSocial) {
-		this.nomeSocial = nomeSocial;
-	}
-
-	public String getCnpj() {
-		return cnpj;
-	}
-
-	public void setCnpj(String cnpj) {
-		this.cnpj = cnpj;
-	}
-
-	public PessoaFisica getFuncionario() {
+	public List<PessoaFisica> getFuncionario() {
 		return funcionario;
 	}
 
-	public void setFuncionario(PessoaFisica funcionario) {
+	public void setFuncionario(List<PessoaFisica> funcionario) {
 		this.funcionario = funcionario;
 	}
 	
