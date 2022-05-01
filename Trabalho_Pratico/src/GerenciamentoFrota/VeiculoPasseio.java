@@ -2,11 +2,11 @@ package GerenciamentoFrota;
 
 public class VeiculoPasseio extends Veiculo {
 	private String categoria;
-	private String itensOpcionais;
+	private String [] itensOpcionais;
 	
-	public VeiculoPasseio(String marca, String modelo, String anoFabricacao, String numeroCadastro,
-			float capacidadeTanque, String categoria, String itensOpcionais,Valores valores) {
-		super(marca, modelo, anoFabricacao, numeroCadastro, capacidadeTanque,valores);
+	public VeiculoPasseio(String marca, String modelo, String anoFabricacao, String anoModelo, String numeroCadastro,
+			float capacidadeTanque, String categoria, String itensOpcionais[],Valores valores) {
+		super(marca, modelo, anoFabricacao, anoModelo, numeroCadastro, capacidadeTanque,valores);
 		this.categoria = categoria;
 		this.itensOpcionais = itensOpcionais;
 	}
@@ -17,10 +17,10 @@ public class VeiculoPasseio extends Veiculo {
 	public void setCategoria(String categoria) {
 		this.categoria = categoria;
 	}
-	public String getItensOpcionais() {
+	public String[] getItensOpcionais() {
 		return itensOpcionais;
 	}
-	public void setItensOpcionais(String itensOpcionais) {
+	public void setItensOpcionais(String[] itensOpcionais) {
 		this.itensOpcionais = itensOpcionais;
 	}
 	

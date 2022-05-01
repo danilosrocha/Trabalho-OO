@@ -1,23 +1,15 @@
 package GerenciamentoFrota;
 
 public class VeiculoCarga extends VeiculosUtilitarios{
-	private float capacidadeCarga;
 	private String taraVeiculo;
 	private CompartimentoCarga compartimentoCarga;
 	
-	public VeiculoCarga(String marca, String modelo, String anoFabricacao, String numeroCadastro,
-		float capacidadeTanque, String tipoUtilitario, String itensOpcionais, float capacidadeCarga,
-			String taraVeiculo, CompartimentoCarga compartimentoCarga,Valores valores) {
-		super(marca, modelo, anoFabricacao, numeroCadastro, capacidadeTanque, tipoUtilitario, itensOpcionais,valores);
-		this.capacidadeCarga = capacidadeCarga;
+	public VeiculoCarga(String marca, String modelo, String anoFabricacao, String anoModelo, String numeroCadastro,
+		float capacidadeTanque, String tipoUtilitario, String taraVeiculo, CompartimentoCarga compartimentoCarga,
+		Valores valores) {
+		super(marca, modelo, anoFabricacao, anoModelo, numeroCadastro, capacidadeTanque, tipoUtilitario,valores);
 		this.taraVeiculo = taraVeiculo;
 		this.compartimentoCarga = compartimentoCarga;
-	}
-	public float getCapacidadeCarga() {
-		return capacidadeCarga;
-	}
-	public void setCapacidadeCarga(float capacidadeCarga) {
-		this.capacidadeCarga = capacidadeCarga;
 	}
 	public String getTaraVeiculo() {
 		return taraVeiculo;

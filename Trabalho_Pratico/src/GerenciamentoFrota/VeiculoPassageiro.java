@@ -2,10 +2,11 @@ package GerenciamentoFrota;
 
 public class VeiculoPassageiro extends VeiculosUtilitarios{
 	private int quantidadeOcupantes;
+	private String [] itensOpcionais;
 	
-	public VeiculoPassageiro(String marca, String modelo, String anoFabricacao, String numeroCadastro,
-			float capacidadeTanque, String tipoUtilitario, String itensOpcionais, int quantidadeOcupantes,Valores valores) {
-		super(marca, modelo, anoFabricacao, numeroCadastro, capacidadeTanque, tipoUtilitario, itensOpcionais,valores);
+	public VeiculoPassageiro(String marca, String modelo, String anoFabricacao, String anoModelo, String numeroCadastro,
+			float capacidadeTanque, String tipoUtilitario, String itensOpcionais[], int quantidadeOcupantes,Valores valores) {
+		super(marca, modelo, anoFabricacao, anoModelo, numeroCadastro, capacidadeTanque, tipoUtilitario,valores);
 		this.quantidadeOcupantes = quantidadeOcupantes;
 	}
 

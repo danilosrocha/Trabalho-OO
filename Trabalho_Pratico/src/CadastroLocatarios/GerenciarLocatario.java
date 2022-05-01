@@ -110,32 +110,96 @@ public class GerenciarLocatario {
 				"A) Nome" + "\n" +
 				"B) CPF ou CNPJ" + "\n" +
 				"C) Email" + "\n" +
-				"D) Celular");
+				"D) Celular" + "\n" +
+				"E) Endereco");
 		entrada = entrada.toUpperCase();
 		switch (entrada) {
 		case "A":
-			String modificacao = JOptionPane.showInputDialog("Mudar " + pesquisarLocatario(locAlterar, 2).getNomeCompleto() + " para: ");
-			pesquisarLocatario(locAlterar, 2).setNomeCompleto(modificacao);
+			String modNome = JOptionPane.showInputDialog("Mudar " + pesquisarLocatario(locAlterar, 2).getNomeCompleto() + " para: ");
+			pesquisarLocatario(locAlterar, 2).setNomeCompleto(modNome);
 			break;
 			
 		case "B":
-			String modificacaoB = JOptionPane.showInputDialog("Mudar " + pesquisarLocatario(locAlterar, 2).getCpf_cnpj() + " para: ");
-			pesquisarLocatario(locAlterar, 2).setCpf_cnpj(modificacaoB);
+			String modCpfCnpj = JOptionPane.showInputDialog("Mudar " + pesquisarLocatario(locAlterar, 2).getCpf_cnpj() + " para: ");
+			pesquisarLocatario(locAlterar, 2).setCpf_cnpj(modCpfCnpj);
 			break;
 			
 		case "C":
-			String modificacaoC = JOptionPane.showInputDialog("Mudar " + pesquisarLocatario(locAlterar, 2).getEmail() + " para: ");
-			pesquisarLocatario(locAlterar, 2).setEmail(modificacaoC);
+			String modEmail = JOptionPane.showInputDialog("Mudar " + pesquisarLocatario(locAlterar, 2).getEmail() + " para: ");
+			pesquisarLocatario(locAlterar, 2).setEmail(modEmail);
 			break;
 			
 		case "D":
-			String modificacaoD = JOptionPane.showInputDialog("Mudar " + pesquisarLocatario(locAlterar, 2).getCelular() + " para: ");
-			pesquisarLocatario(locAlterar, 2).setCelular(modificacaoD);
+			String modCelular = JOptionPane.showInputDialog("Mudar " + pesquisarLocatario(locAlterar, 2).getCelular() + " para: ");
+			pesquisarLocatario(locAlterar, 2).setCelular(modCelular);
+			break;
+		case "E":
+			String entrada2 = JOptionPane.showInputDialog("Qual informação do endereco deseja modificar?" + "\n" +
+													"A) Rua" + "\n" +
+													"B) Número" + "\n" +
+													"C) Complemento" + "\n" +
+													"D) Bairro" + "\n" +
+													"E) Cidade" + "\n" +
+													"F) Estado" + "\n" +
+													"G) CEP" +"\n" +
+													"H) Endereco completo");
+					
+			entrada2 = entrada2.toUpperCase();
+					switch (entrada2) {
+					
+					case "A":
+						String ruaTemp = JOptionPane.showInputDialog("Mudar " + pesquisarLocatario(locAlterar, 2).getEndereco().getRua() + " para: ");
+						pesquisarLocatario(locAlterar, 2).getEndereco().setRua(ruaTemp);
+						break;
+					case "B":
+						String numeroTemp = JOptionPane.showInputDialog("Mudar " + pesquisarLocatario(locAlterar, 2).getEndereco().getNumero() + " para: ");
+						int inumeroTemp = Integer.parseInt(numeroTemp);
+						pesquisarLocatario(locAlterar, 2).getEndereco().setNumero(inumeroTemp);
+						break;
+					case "C":
+						String complementoTemp = JOptionPane.showInputDialog("Mudar " + pesquisarLocatario(locAlterar, 2).getEndereco().getComplemento() + " para: ");
+						pesquisarLocatario(locAlterar, 2).getEndereco().setComplemento(complementoTemp);
+						break;
+					case "D": 
+						String bairroTemp = JOptionPane.showInputDialog("Mudar " + pesquisarLocatario(locAlterar, 2).getEndereco().getBairro() + " para: ");
+						pesquisarLocatario(locAlterar, 2).getEndereco().setBairro(bairroTemp);
+						break;
+					case "E": 
+						String cidadeTemp = JOptionPane.showInputDialog("Mudar " + pesquisarLocatario(locAlterar, 2).getEndereco().getCidade() + " para: ");
+						pesquisarLocatario(locAlterar, 2).getEndereco().setCidade(cidadeTemp);
+						break;
+					case "F":
+						String estadoTemp = JOptionPane.showInputDialog("Mudar " + pesquisarLocatario(locAlterar, 2).getEndereco().getEstado() + " para: ");
+						pesquisarLocatario(locAlterar, 2).getEndereco().setEstado(estadoTemp);
+						break;
+					case "G":
+						String cepTemp = JOptionPane.showInputDialog("Mudar " + pesquisarLocatario(locAlterar, 2).getEndereco().getCep() + " para: ");
+						pesquisarLocatario(locAlterar, 2).getEndereco().setCep(cepTemp);
+						break;
+					case "H":
+						String ruaChange = JOptionPane.showInputDialog("Insira o nome da sua Rua: ");
+						pesquisarLocatario(locAlterar, 2).getEndereco().setRua(ruaChange);
+						String numeroChange = JOptionPane.showInputDialog("Insira o numero: ");
+						int iNumeroChange = Integer.parseInt(numeroChange);
+						pesquisarLocatario(locAlterar, 2).getEndereco().setNumero(iNumeroChange);
+						String bairroChange = JOptionPane.showInputDialog("Insira o bairro: ");
+						pesquisarLocatario(locAlterar, 2).getEndereco().setBairro(bairroChange);
+						String cidadeChange = JOptionPane.showInputDialog("Insira sua cidade: ");
+						pesquisarLocatario(locAlterar, 2).getEndereco().setCidade(cidadeChange);
+						String estadoChange = JOptionPane.showInputDialog("Insira sua estado: ");
+						pesquisarLocatario(locAlterar, 2).getEndereco().setEstado(estadoChange);
+						String complementoChange = JOptionPane.showInputDialog("Insira o complemento: ");
+						pesquisarLocatario(locAlterar, 2).getEndereco().setComplemento(complementoChange);
+						String cepChange = JOptionPane.showInputDialog("Insira seu CEP: ");
+						pesquisarLocatario(locAlterar, 2).getEndereco().setCep(cepChange);
+						break;
+					default:
+						break;
+					}
 			break;
 		default:
 			break;
 		}
-		//Falta o endereÃ§o
 		return validar;
 	}
 	
@@ -167,7 +231,7 @@ public class GerenciarLocatario {
             }
            
            for (Locatario locPesquisado : locatario){
-               //Pesquisa por nome
+               //Pesquisa por email
                 if(locPesquisado.getEmail().equalsIgnoreCase(pesquisa)){
                     resposta = locPesquisado;
                     validar = true;
@@ -176,7 +240,7 @@ public class GerenciarLocatario {
             }
            
            for (Locatario locPesquisado : locatario){
-               //Pesquisa por nome
+               //Pesquisa por cpf/cnpj
                 if(locPesquisado.getCpf_cnpj().equalsIgnoreCase(pesquisa)){
                     resposta = locPesquisado;
                     validar = true;

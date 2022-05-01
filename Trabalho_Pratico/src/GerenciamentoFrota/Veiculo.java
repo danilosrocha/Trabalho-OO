@@ -16,10 +16,11 @@ public class Veiculo {
 		
 	}
 	
-	public Veiculo(String marca, String modelo, String anoFabricacao, String numeroCadastro, float capacidadeTanque, Valores valores) {
+	public Veiculo(String marca, String modelo, String anoFabricacao,String anoModelo, String numeroCadastro, float capacidadeTanque, Valores valores) {
 		this.marca = marca;
 		this.modelo = modelo;
 		this.anoFabricacao = anoFabricacao;
+		this.anoModelo = anoModelo;
 		this.numeroCadastro = numeroCadastro;
 		this.capacidadeTanque = capacidadeTanque;
 		this.valores = valores;	
@@ -31,14 +32,6 @@ public class Veiculo {
 	public void setMarca(String marca) {
 		this.marca = marca;
 	}
-	public String getAnoModelo() {
-		return anoModelo;
-	}
-
-	public void setAnoModelo(String anoModelo) {
-		this.anoModelo = anoModelo;
-	}
-
 	public String getModelo() {
 		return modelo;
 	}
@@ -71,21 +64,13 @@ public class Veiculo {
 	public void setValores(Valores valores) {
 		this.valores = valores;
 	}
+	
+	public String getAnoModelo() {
+		return anoModelo;
+	}
 
-	public void cadastrar() {
-		
-	}
-	
-	public boolean pesquisar(String numeroCadastro) {
-		return true;
-	}
-	
-	public void alterar() {
-		
-	}
-	
-	public void apagar() {
-		
+	public void setAnoModelo(String anoModelo) {
+		this.anoModelo = anoModelo;
 	}
 	
 }
