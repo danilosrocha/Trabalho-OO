@@ -108,20 +108,7 @@ public class MenuPrincipal {
 						case "B":
 							gCadastroFrota.pesquisar();
 							break;
-							/*String entrada_BB = JOptionPane.showInputDialog("Menu de Pesquisa de Veiculos: " + "\n" + 
-							"A) Pesquisar ve�culo pelo Renavam" + "\n" +
-							"B) Pesquisar ve�culo por marca, modelo ou renavam");
 							
-					entrada_BB = entrada_BB.toUpperCase();
-					*/
-							/*switch(entrada_BB) {
-								case "A":
-									JOptionPane.showMessageDialog(null, "Pesquisa pelo Renavam realizada com sucesso!");
-									break;
-								case "B":
-									JOptionPane.showMessageDialog(null, "Pesquisa pela marca realizada com sucesso!");
-									break;
-							}*/
 						case "C":
 							gCadastroFrota.alterar();
 							break;
@@ -213,7 +200,7 @@ public class MenuPrincipal {
 						entrada = "D";
 						break;
 					default:
-						JOptionPane.showMessageDialog(null, "Op��o inv�lida\nReinicie a Plataforma\n");
+						JOptionPane.showMessageDialog(null, "Opcao invalida\nReinicie a Plataforma\n");
 						break;
 			}
 		} while(entrada != "D");
