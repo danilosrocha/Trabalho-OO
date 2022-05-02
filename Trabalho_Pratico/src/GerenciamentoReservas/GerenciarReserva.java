@@ -243,8 +243,7 @@ public void pesquisar () {
 	JOptionPane.showMessageDialog(null, "Reserva: " + reservaApresentar.getIdentificador() + "\n" +
 										"Locatario: " + reservaApresentar.getLocResponsavel() + "\n" + 
 										"Responsavel pela locacao: " + reservaApresentar.getLocCliente() + "\n" + 
-										"****************************** Dados da Locação ******************************"
-										+
+										"****************************** Dados da Locação ******************************" + "\n" +
 										"Inicio: " + reservaApresentar.getDataHoraInicio() + "\n" +
 										"Fim: " + reservaApresentar.getDataHoraFim() + "\n" +
 										"Numero de diarias calculadas: " + TempoDeReserva(reservaApresentar.getDataHoraInicio(), reservaApresentar.getDataHoraFim()) + "\n" +
