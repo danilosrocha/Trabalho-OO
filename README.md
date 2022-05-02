@@ -1,6 +1,6 @@
 # Trabalho-OO
 
-- Grupo 3:
+# Grupo 3:
 
 - Lizandra Malta - 190091282
 - Danilo Rocha - 190042397
