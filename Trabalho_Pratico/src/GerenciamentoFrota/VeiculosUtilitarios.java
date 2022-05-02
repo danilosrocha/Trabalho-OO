@@ -5,7 +5,7 @@ public class VeiculosUtilitarios extends Veiculo{
 	
 	public VeiculosUtilitarios(String marca, String modelo, String anoFabricacao, String anoModelo, String numeroCadastro,
 		float capacidadeTanque, String tipoUtilitario,Valores valores) {
-		super(marca, modelo, anoFabricacao, anoModelo, numeroCadastro, capacidadeTanque,valores);
+		super(marca, modelo, anoFabricacao, anoModelo, numeroCadastro, capacidadeTanque,valores, "Veiculo Utilitario");
 		this.tipoUtilitario = tipoUtilitario;
 	}
 	public String getTipoUtilitario() {

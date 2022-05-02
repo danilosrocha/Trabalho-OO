@@ -1,66 +1,53 @@
 package GerenciamentoReservas;
 
-import CadastroLocatarios.Locatario;
 import GerenciamentoFrota.Veiculo;
+
+/*
+ * int identificador, String locResponsavel, String locCliente, Int tipoReserva(tipo de diária),
+		float custo, Veiculo veiculo
+ */
+
 
 public class Reserva {
 	private int identificador;
-	private Locatario responsavel;
-	private Locatario cliente;
-	private String tipoReserva;
-	private int diaria;
-	private String horarioInicio;
-	private String horarioFim;
-	private float valor;
+	private String locResponsavel;
+	private String locCliente;
+	private int tipoReserva;
+	private float custo;
 	private Veiculo veiculo;
+	private String dataHoraInicio;
+	private String dataHoraFim;
+	private float custoInicial;
+	private float seguroTerceiros;
+	private float seguroVeiculo;
+	private float seguroImposto;
 	
+	public Reserva(int identificador, String responsavel, String cliente, int tipoReserva,
+			float Custo, Veiculo veiculo, String dataHoraInicio, String dataHoraFim, float custoInicial, float seguroTerceiros, float seguroVeiculo,
+			float seguroImposto) {
+		this.identificador = identificador;
+		this.tipoReserva = tipoReserva;
+		this.veiculo = veiculo;
+		this.dataHoraFim = dataHoraFim;
+		this.dataHoraInicio = dataHoraInicio;
+		this.setCustoInicial(custoInicial);
+		this.setSeguroTerceiros(seguroTerceiros);
+		this.setSeguroVeiculo(seguroVeiculo);
+		this.setSeguroImposto(seguroImposto);
+		
+	}
 	public int getIdentificador() {
 		return identificador;
 	}
 	public void setIdentificador(int identificador) {
 		this.identificador = identificador;
 	}
-	public Locatario getResponsavel() {
-		return responsavel;
-	}
-	public void setResponsavel(Locatario responsavel) {
-		this.responsavel = responsavel;
-	}
-	public Locatario getCliente() {
-		return cliente;
-	}
-	public void setCliente(Locatario cliente) {
-		this.cliente = cliente;
-	}
-	public String getTipoReserva() {
+	
+	public int getTipoReserva() {
 		return tipoReserva;
 	}
-	public void setTipoReserva(String tipoReserva) {
+	public void setTipoReserva(int tipoReserva) {
 		this.tipoReserva = tipoReserva;
-	}
-	public int getDiaria() {
-		return diaria;
-	}
-	public void setDiaria(int diaria) {
-		this.diaria = diaria;
-	}
-	public String getHorarioInicio() {
-		return horarioInicio;
-	}
-	public void setHorarioInicio(String horarioInicio) {
-		this.horarioInicio = horarioInicio;
-	}
-	public String getHorarioFim() {
-		return horarioFim;
-	}
-	public void setHorarioFim(String horarioFim) {
-		this.horarioFim = horarioFim;
-	}
-	public float getValor() {
-		return valor;
-	}
-	public void setValor(float valor) {
-		this.valor = valor;
 	}
 	
 	public Veiculo getVeiculo() {
@@ -69,25 +56,58 @@ public class Reserva {
 	public void setVeiculo(Veiculo veiculo) {
 		this.veiculo = veiculo;
 	}
-	public void cadastrar() {
-		
+	public String getLocCliente() {
+		return locCliente;
 	}
-	public boolean pesquisar(int identificador) {
-		return true;
+	public void setLocCliente(String locCliente) {
+		this.locCliente = locCliente;
 	}
-	public void alterar() {
-		
+	public String getLocResponsavel() {
+		return locResponsavel;
 	}
-	public void apagar() {
-		
+	public void setLocResponsavel(String locResponsavel) {
+		this.locResponsavel = locResponsavel;
 	}
-	public void gerarRelatorioIndividual() {
-		
+	public float getCusto() {
+		return custo;
 	}
-	public void gerarRelatorioGeral() {
-		
+	public void setCusto(float custo) {
+		this.custo = custo;
 	}
-	public void calcularValor(float valorDiaria) {
-		
+	public String getDataHoraInicio() {
+		return dataHoraInicio;
+	}
+	public void setDataHoraInicio(String dataHoraInicio) {
+		this.dataHoraInicio = dataHoraInicio;
+	}
+	public String getDataHoraFim() {
+		return dataHoraFim;
+	}
+	public void setDataHoraFim(String dataHoraFim) {
+		this.dataHoraFim = dataHoraFim;
+	}
+	public float getCustoInicial() {
+		return custoInicial;
+	}
+	public void setCustoInicial(float custoInicial) {
+		this.custoInicial = custoInicial;
+	}
+	public float getSeguroTerceiros() {
+		return seguroTerceiros;
+	}
+	public void setSeguroTerceiros(float seguroTerceiros) {
+		this.seguroTerceiros = seguroTerceiros;
+	}
+	public float getSeguroVeiculo() {
+		return seguroVeiculo;
+	}
+	public void setSeguroVeiculo(float seguroVeiculo) {
+		this.seguroVeiculo = seguroVeiculo;
+	}
+	public float getSeguroImposto() {
+		return seguroImposto;
+	}
+	public void setSeguroImposto(float seguroImposto) {
+		this.seguroImposto = seguroImposto;
 	}
 }

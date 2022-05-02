@@ -11,12 +11,13 @@ public class Veiculo {
 	private String numeroCadastro;
 	private float capacidadeTanque;
 	private Valores valores;
+	private String categoria;
 	
 	public Veiculo() {
 		
 	}
 	
-	public Veiculo(String marca, String modelo, String anoFabricacao,String anoModelo, String numeroCadastro, float capacidadeTanque, Valores valores) {
+	public Veiculo(String marca, String modelo, String anoFabricacao,String anoModelo, String numeroCadastro, float capacidadeTanque, Valores valores, String categoria) {
 		this.marca = marca;
 		this.modelo = modelo;
 		this.anoFabricacao = anoFabricacao;
@@ -24,6 +25,7 @@ public class Veiculo {
 		this.numeroCadastro = numeroCadastro;
 		this.capacidadeTanque = capacidadeTanque;
 		this.valores = valores;	
+		this.setCategoria(categoria);
 	}
 	
 	public String getMarca() {
@@ -71,6 +73,14 @@ public class Veiculo {
 
 	public void setAnoModelo(String anoModelo) {
 		this.anoModelo = anoModelo;
+	}
+
+	public String getCategoria() {
+		return categoria;
+	}
+
+	public void setCategoria(String categoria) {
+		this.categoria = categoria;
 	}
 	
 }

@@ -6,7 +6,7 @@ public class VeiculoPasseio extends Veiculo {
 	
 	public VeiculoPasseio(String marca, String modelo, String anoFabricacao, String anoModelo, String numeroCadastro,
 			float capacidadeTanque, String categoria, String itensOpcionais[],Valores valores) {
-		super(marca, modelo, anoFabricacao, anoModelo, numeroCadastro, capacidadeTanque,valores);
+		super(marca, modelo, anoFabricacao, anoModelo, numeroCadastro, capacidadeTanque,valores, "Veiculo de passeio");
 		this.categoria = categoria;
 		this.itensOpcionais = itensOpcionais;
 	}

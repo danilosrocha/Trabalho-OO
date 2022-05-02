@@ -5,7 +5,7 @@ public class Motocicleta extends Veiculo {
 	
 	public Motocicleta(String marca, String modelo, String anoFabricacao, String anoModelo, String numeroCadastro,
 			float capacidadeTanque, String itensOpcionais [],Valores valores) {
-		super(marca, modelo, anoFabricacao, anoModelo, numeroCadastro, capacidadeTanque,valores);
+		super(marca, modelo, anoFabricacao, anoModelo, numeroCadastro, capacidadeTanque,valores, "Motocicleta");
 		this.itensOpcionais = itensOpcionais;
 	}
 
