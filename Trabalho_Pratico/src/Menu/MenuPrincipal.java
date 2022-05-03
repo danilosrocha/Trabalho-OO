@@ -136,9 +136,11 @@ public class MenuPrincipal {
 						int input = JOptionPane.showOptionDialog(null, "A reserva sera feita para pessoa fisica ou juridica?", "Confirmacao de Reserva",
 								JOptionPane.YES_NO_OPTION,JOptionPane.QUESTION_MESSAGE,
 								null, confirmarReserva, confirmarReserva[0] );
+						
 						if (input == 0) {
 							termoPesq = JOptionPane.showInputDialog("Informe o Nome, CPF, ou Email da pessoa fisica: ");
-							PessoaFisica locCliente = (PessoaFisica)gCadastro.pesquisarLocatario(termoPesq,2);
+							Locatario locClientePf = gCadastro.pesquisarLocatario(termoPesq,2);
+							String locCliente = locClientePf.getNomeCompleto();
 							
 							String termoPesqVeiculo = JOptionPane.showInputDialog("Informe o RENAVAM do veiculo a ser locado:");
 							Veiculo veiculo = gCadastroFrota.pesquisarVeiculo(termoPesqVeiculo, 2);
@@ -150,10 +152,12 @@ public class MenuPrincipal {
 						else if (input == 1) {
 							termoPesq = JOptionPane.showInputDialog("Informe o Nome, CNPJ, ou Email da pessoa juridica: ");
 							PessoaJuridica locResponsavel = (PessoaJuridica) gCadastro.pesquisarLocatario(termoPesq,2);
+							Locatario locatResponsavelPj = gCadastro.pesquisarLocatario(termoPesq,2);
+							String nomeResponsavel = locatResponsavelPj.getNomeCompleto();
 							locResponsavel.getFuncionario();
 							String termoPesqPessoaF = JOptionPane.showInputDialog("Informe o Nome, CPF, ou Email da pessoa fisica a realizar a locacao: ");
-							PessoaFisica locFuncionario = null;
-							for (PessoaFisica buscaPf : locResponsavel.getFuncionario()){
+							Locatario locFuncionario = null;
+							for (Locatario buscaPf : locResponsavel.getFuncionario()){
 					               //Pesquisa por email
 					                if(buscaPf.getEmail().equalsIgnoreCase(termoPesqPessoaF)){
 					                	locFuncionario = buscaPf;
@@ -171,7 +175,7 @@ public class MenuPrincipal {
 							///buscar veiculo
 							String termoPesqVeiculo = JOptionPane.showInputDialog("Informe o RENAVAM do veiculo a ser locado:");
 							Veiculo veiculo = gCadastroFrota.pesquisarVeiculo(termoPesqVeiculo, 2);
-							gCadastroReserva.GerenciarReservasPj(identificadorReserva, locResponsavel, locFuncionario, veiculo);
+							gCadastroReserva.GerenciarReservasPj(identificadorReserva, nomeResponsavel, locFuncionario.getNomeCompleto(), veiculo);
 							identificadorReserva ++;
 						}
 							break;

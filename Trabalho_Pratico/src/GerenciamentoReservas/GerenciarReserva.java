@@ -51,7 +51,7 @@ public class GerenciarReserva {
 		return diasPassados;
     }
 
-public void GerenciarReservasPf(int id, PessoaFisica locador,Veiculo veiculoSelec) {
+public void GerenciarReservasPf(int id, String locador,Veiculo veiculoSelec) {
 	boolean valida = false;
 	/*
 	 * int identificador, String locResponsavel, String locCliente, Int tipoReserva(tipo de diária),
@@ -59,7 +59,7 @@ public void GerenciarReservasPf(int id, PessoaFisica locador,Veiculo veiculoSele
 	 */
 	int identificador = id;
 	int tipoReserva = 0; 
-	String locResponsavel = locador.getNomeCompleto();
+	String locResponsavel = locador;
 	String locCliente = locResponsavel;
 	
 	Object[] confirmarTipoReserva = { "Diarias simples", "Diaria empresarial","Diaria mensal"};
@@ -135,7 +135,7 @@ public void GerenciarReservasPf(int id, PessoaFisica locador,Veiculo veiculoSele
 	return;
 }
 
-public void GerenciarReservasPj(int id, PessoaJuridica locadorPj,PessoaFisica locadorPf, Veiculo veiculoSelec) {
+public void GerenciarReservasPj(int id, String locadorPj,String locadorPf, Veiculo veiculoSelec) {
 	boolean valida = false;
 	/*
 	 * int identificador, String locResponsavel, String locCliente, Int tipoReserva(tipo de diária),
@@ -143,8 +143,8 @@ public void GerenciarReservasPj(int id, PessoaJuridica locadorPj,PessoaFisica lo
 	 */
 	int identificador = id;
 	int tipoReserva = 0; 
-	String locResponsavel = locadorPj.getNomeCompleto();
-	String locCliente = locadorPf.getNomeCompleto();
+	String locResponsavel = locadorPj;
+	String locCliente = locadorPf;
 	
 	Object[] confirmarTipoReserva = { "Diarias simples", "Diaria empresarial","Diaria mensal"};
 	Object[] confirmarTipoReservaExtra = { "Diaria comum", "Diaria reduzida" };
