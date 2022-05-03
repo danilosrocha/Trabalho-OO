@@ -30,7 +30,7 @@ public class GerenciarReserva {
 
         SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy HH:mm");
         long diasPassados = 0;
-        long horasPassadas = 0;
+        //long horasPassadas = 0;
         try {
             Date d1 = sdf.parse(dataInicio);
             Date d2 = sdf.parse(dataFim);
@@ -39,12 +39,12 @@ public class GerenciarReserva {
 
         diasPassados = (tempoTotalPassado/ (1000 * 60 * 60 * 24))% 365;
         
-        horasPassadas= (tempoTotalPassado/ (1000 * 60 * 60))% 24;
+        //horasPassadas= (tempoTotalPassado/ (1000 * 60 * 60))% 24;
         }
         catch (ParseException e) {
             e.printStackTrace();
         }
-        if (horasPassadas > 0) {
+        if (diasPassados == 0) {
         	diasPassados++;
         }
 
