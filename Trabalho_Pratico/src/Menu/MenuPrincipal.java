@@ -139,8 +139,7 @@ public class MenuPrincipal {
 						
 						if (input == 0) {
 							termoPesq = JOptionPane.showInputDialog("Informe o Nome, CPF, ou Email da pessoa fisica: ");
-							Locatario locClientePf = gCadastro.pesquisarLocatario(termoPesq,2);
-							String locCliente = locClientePf.getNomeCompleto();
+							String locCliente = gCadastro.pesquisarLocatario(termoPesq,2).getNomeCompleto();
 							
 							String termoPesqVeiculo = JOptionPane.showInputDialog("Informe o RENAVAM do veiculo a ser locado:");
 							Veiculo veiculo = gCadastroFrota.pesquisarVeiculo(termoPesqVeiculo, 2);
