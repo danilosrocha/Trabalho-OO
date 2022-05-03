@@ -8,6 +8,7 @@ import CadastroLocatarios.GerenciarLocatario;
 import CadastroLocatarios.Locatario;
 import CadastroLocatarios.PessoaFisica;
 import CadastroLocatarios.PessoaJuridica;
+import Excecoes.objetoNaoEncontradoException;
 import GerenciamentoFrota.GerenciarFrota;
 import GerenciamentoFrota.Veiculo;
 import GerenciamentoReservas.GerenciarReserva;
@@ -16,7 +17,7 @@ public class MenuPrincipal {
 	static GerenciarLocatario gCadastro = new GerenciarLocatario();
 	static GerenciarFrota gCadastroFrota = new GerenciarFrota();
 	static GerenciarReserva gCadastroReserva = new GerenciarReserva();
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 		// TODO Auto-generated method stub
 		int identificadorReserva = 1;
 		

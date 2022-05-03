@@ -6,6 +6,8 @@ import java.util.Scanner;
 
 import javax.swing.JOptionPane;
 
+import Excecoes.campoEmBrancoException;
+
 public class GerenciarFrota {
 	private List <Veiculo> Veiculo;
 	
@@ -15,11 +17,42 @@ public class GerenciarFrota {
 	public VeiculosUtilitarios cadastrarVeiculoCarga() {
 		boolean valida = false;
 		/// Dados iniciais
-		String marca = JOptionPane.showInputDialog("Informe a marca do veiculo: ");
-		String modelo = JOptionPane.showInputDialog("Informe o modelo do veiculo: ");
+		String marca = null;
+		do {
+			try {
+					marca = JOptionPane.showInputDialog("Informe a marca do veiculo: ");
+					valida = true;
+					throw new campoEmBrancoException();
+				}
+			catch (campoEmBrancoException e) {
+				valida = false;
+				}
+		   } while (valida);
+		String modelo = null;
+		do {
+			try {
+					modelo = JOptionPane.showInputDialog("Informe o modelo do veiculo: ");
+					valida = true;
+					throw new campoEmBrancoException();
+				}
+			catch (campoEmBrancoException e) {
+				valida = false;
+				}
+		   } while (valida);
+		String renavam = null;
+		do {
+			try {
+					renavam = JOptionPane.showInputDialog("Informe o RENAVAM do veiculo: ");
+					valida = true;
+					throw new campoEmBrancoException();
+				}
+			catch (campoEmBrancoException e) {
+				valida = false;
+				}
+		   } while (valida);
+		
 		String anoFabricacao = JOptionPane.showInputDialog("Informe o ano de fabricacao do veiculo: ");
 		String anoModelo = JOptionPane.showInputDialog("Informe o ano do modelo do veiculo: ");
-		String renavam = JOptionPane.showInputDialog("Informe o RENAVAM do veiculo: ");
 		String strcapacidadeTanque = JOptionPane.showInputDialog("Insira a capacidade do tanque (apenas valor numerico): ");
 		float capacidadeTanque = Float.parseFloat(strcapacidadeTanque);
 		String tipoUtilitario = "Veiculo de Carga";
@@ -67,11 +100,42 @@ public class GerenciarFrota {
 	public VeiculosUtilitarios cadastrarVeiculoPassageiro() {
 		boolean valida = false;
 		/// Dados iniciais
-				String marca = JOptionPane.showInputDialog("Informe a marca do veiculo: ");
-				String modelo = JOptionPane.showInputDialog("Informe o modelo do veiculo: ");
+		String marca = null;
+		do {
+			try {
+					marca = JOptionPane.showInputDialog("Informe a marca do veiculo: ");
+					valida = true;
+					throw new campoEmBrancoException();
+				}
+			catch (campoEmBrancoException e) {
+				valida = false;
+				}
+		   } while (valida);
+		String modelo = null;
+		do {
+			try {
+					modelo = JOptionPane.showInputDialog("Informe o modelo do veiculo: ");
+					valida = true;
+					throw new campoEmBrancoException();
+				}
+			catch (campoEmBrancoException e) {
+				valida = false;
+				}
+		   } while (valida);
+		String renavam = null;
+		do {
+			try {
+					renavam = JOptionPane.showInputDialog("Informe o RENAVAM do veiculo: ");
+					valida = true;
+					throw new campoEmBrancoException();
+				}
+			catch (campoEmBrancoException e) {
+				valida = false;
+				}
+		   } while (valida);
+		
 				String anoFabricacao = JOptionPane.showInputDialog("Informe o ano de fabricacao do veiculo: ");
 				String anoModelo = JOptionPane.showInputDialog("Informe o ano do modelo do veiculo: ");
-				String renavam = JOptionPane.showInputDialog("Informe o RENAVAM do veiculo: ");
 				String strcapacidadeTanque = JOptionPane.showInputDialog("Insira a capacidade do tanque (apenas valor numerico): ");
 				float capacidadeTanque = Float.parseFloat(strcapacidadeTanque);
 				String tipoUtilitario = "Veiculo de passageiros";
@@ -135,11 +199,42 @@ public class GerenciarFrota {
 
 	public VeiculoPasseio cadastrarVeiculoPasseio() {
 		boolean valida = false;
-		String marca = JOptionPane.showInputDialog("Informe a marca do veiculo: ");
-		String modelo = JOptionPane.showInputDialog("Informe o modelo do veiculo: ");
+		String marca = null;
+		do {
+			try {
+					marca = JOptionPane.showInputDialog("Informe a marca do veiculo: ");
+					valida = true;
+					throw new campoEmBrancoException();
+				}
+			catch (campoEmBrancoException e) {
+				valida = false;
+				}
+		   } while (valida);
+		String modelo = null;
+		do {
+			try {
+					modelo = JOptionPane.showInputDialog("Informe o modelo do veiculo: ");
+					valida = true;
+					throw new campoEmBrancoException();
+				}
+			catch (campoEmBrancoException e) {
+				valida = false;
+				}
+		   } while (valida);
+		String renavam = null;
+		do {
+			try {
+					renavam = JOptionPane.showInputDialog("Informe o RENAVAM do veiculo: ");
+					valida = true;
+					throw new campoEmBrancoException();
+				}
+			catch (campoEmBrancoException e) {
+				valida = false;
+				}
+		   } while (valida);
+		
 		String anoFabricacao = JOptionPane.showInputDialog("Informe o ano de fabricacao do veiculo: ");
 		String anoModelo = JOptionPane.showInputDialog("Informe o ano do modelo do veiculo: ");
-		String renavam = JOptionPane.showInputDialog("Informe o RENAVAM do veiculo: ");
 		String strcapacidadeTanque = JOptionPane.showInputDialog("Insira a capacidade do tanque (apenas valor numerico): ");
 		float capacidadeTanque = Float.parseFloat(strcapacidadeTanque);
 		///
@@ -222,11 +317,42 @@ public class GerenciarFrota {
 
 	public Motocicleta cadastrarMotocicleta() {
 		boolean valida = false;
-		String marca = JOptionPane.showInputDialog("Informe a marca da motocicleta: ");
-		String modelo = JOptionPane.showInputDialog("Informe o modelo da motocicleta: ");
+		String marca = null;
+		do {
+			try {
+					marca = JOptionPane.showInputDialog("Informe a marca do veiculo: ");
+					valida = true;
+					throw new campoEmBrancoException();
+				}
+			catch (campoEmBrancoException e) {
+				valida = false;
+				}
+		   } while (valida);
+		String modelo = null;
+		do {
+			try {
+					modelo = JOptionPane.showInputDialog("Informe o modelo do veiculo: ");
+					valida = true;
+					throw new campoEmBrancoException();
+				}
+			catch (campoEmBrancoException e) {
+				valida = false;
+				}
+		   } while (valida);
+		String renavam = null;
+		do {
+			try {
+					renavam = JOptionPane.showInputDialog("Informe o RENAVAM do veiculo: ");
+					valida = true;
+					throw new campoEmBrancoException();
+				}
+			catch (campoEmBrancoException e) {
+				valida = false;
+				}
+		   } while (valida);
+		
 		String anoFabricacao = JOptionPane.showInputDialog("Informe o ano de fabricacao da motocicleta: ");
 		String anoModelo = JOptionPane.showInputDialog("Informe o ano do modelo da motocicleta: ");
-		String renavam = JOptionPane.showInputDialog("Informe o RENAVAM da motocicleta: ");
 		String strcapacidadeTanque = JOptionPane.showInputDialog("Insira a capacidade do tanque (apenas valor numerico): ");
 		float capacidadeTanque = Float.parseFloat(strcapacidadeTanque);
 		///

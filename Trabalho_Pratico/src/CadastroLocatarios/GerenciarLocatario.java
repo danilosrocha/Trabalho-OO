@@ -1,10 +1,14 @@
 package CadastroLocatarios;
 
+import java.awt.HeadlessException;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
 
 import javax.swing.JOptionPane;
+
+import Excecoes.campoEmBrancoException;
+import Excecoes.objetoNaoEncontradoException;
 
 public class GerenciarLocatario {
 	private List <Locatario> locatario;
@@ -15,10 +19,41 @@ public class GerenciarLocatario {
 	
 	public PessoaFisica cadastrarPessoaFisica() {
 		boolean valida = false;
-		String nomeCompleto = JOptionPane.showInputDialog("Insira seu nome completo: ");
-		String email = JOptionPane.showInputDialog("Insira seu email: ");
+		String nomeCompleto = null;
+		do {
+			try {
+					nomeCompleto = JOptionPane.showInputDialog("Insira o seu nome completo: ");
+					valida = true;
+					throw new campoEmBrancoException();
+				}
+			catch (campoEmBrancoException e) {
+				valida = false;
+				}
+		   } while (valida);
+		String cpf = null;
+		do {
+			try {
+					cpf = JOptionPane.showInputDialog("Insira seu CPF: ");
+					valida = true;
+					throw new campoEmBrancoException();
+				}
+			catch (campoEmBrancoException e) {
+				valida = false;
+				}
+		   } while (valida);
+		String email = null;
+		do {
+			try {
+					email = JOptionPane.showInputDialog("Insira seu email: ");
+					valida = true;
+					throw new campoEmBrancoException();
+				}
+			catch (campoEmBrancoException e) {
+				valida = false;
+				}
+		   } while (valida);
+		
 		String celular = JOptionPane.showInputDialog("Insira seu telefone: ");
-		String cpf = JOptionPane.showInputDialog("Insira seu CPF: ");
 		String estadoCivil = JOptionPane.showInputDialog("Insira seu estado civil: ");
 		String rua = JOptionPane.showInputDialog("Insira o nome da sua Rua: ");
 		String numero = JOptionPane.showInputDialog("Insira o numero: ");
@@ -37,10 +72,42 @@ public class GerenciarLocatario {
 	
 	public boolean cadastrarPessoaJuridica() {
 		boolean valida = false;
-		String nomeCompleto = JOptionPane.showInputDialog("Insira seu nome social: ");
-		String email = JOptionPane.showInputDialog("Insira seu email: ");
+		
+		String nomeCompleto = null;
+		do {
+			try {
+					nomeCompleto = JOptionPane.showInputDialog("Insira seu nome social: ");
+					valida = true;
+					throw new campoEmBrancoException();
+				}
+			catch (campoEmBrancoException e) {
+				valida = false;
+				}
+		   } while (valida);
+		String cnpj = null;
+		do {
+			try {
+					cnpj = JOptionPane.showInputDialog("Insira seu Cnpj: ");
+					valida = true;
+					throw new campoEmBrancoException();
+				}
+			catch (campoEmBrancoException e) {
+				valida = false;
+				}
+		   } while (valida);
+		String email = null;
+		do {
+			try {
+					email = JOptionPane.showInputDialog("Insira seu email: ");
+					valida = true;
+					throw new campoEmBrancoException();
+				}
+			catch (campoEmBrancoException e) {
+				valida = false;
+				}
+		   } while (valida);
+		
 		String celular = JOptionPane.showInputDialog("Insira seu telefone: ");
-		String cnpj = JOptionPane.showInputDialog("Insira seu CNPJ: ");
 		String rua = JOptionPane.showInputDialog("Insira o nome da sua Rua: ");
 		String numero = JOptionPane.showInputDialog("Insira o numero: ");
 		int iNumero = Integer.parseInt(numero);
@@ -67,10 +134,10 @@ public class GerenciarLocatario {
 		return true;
 	}
 	
-	public boolean pesquisar() {
+	public boolean pesquisar() throws Exception {
 		String entrada = JOptionPane.showInputDialog("Informe o que deseja pesquisar: " + "\n" + 
-				"A) Pessoa física" + "\n" +
-				"B) Pessoa Jurídica");
+				"A) Pessoa fisica" + "\n" +
+				"B) Pessoa Juridica");
 		entrada = entrada.toUpperCase();
 		switch (entrada) {
 		case "A":
@@ -103,7 +170,7 @@ public class GerenciarLocatario {
 		return true;
 	}
 	
-	public boolean alterar() {
+	public boolean alterar() throws Exception {
 		String locAlterar = JOptionPane.showInputDialog("Informe o Nome, CPF, CNPJ ou Email do locatario a ser alterado:");
 		boolean validar = false;
 		String entrada = JOptionPane.showInputDialog("Informe o que deseja alterar: " + "\n" + 
@@ -115,17 +182,48 @@ public class GerenciarLocatario {
 		entrada = entrada.toUpperCase();
 		switch (entrada) {
 		case "A":
-			String modNome = JOptionPane.showInputDialog("Mudar " + pesquisarLocatario(locAlterar, 2).getNomeCompleto() + " para: ");
+			boolean valida = false;
+			String modNome = "";
+			do {
+				try {
+						modNome = JOptionPane.showInputDialog("Mudar " + pesquisarLocatario(locAlterar, 2).getNomeCompleto() + " para: ");
+						valida = true;
+						throw new campoEmBrancoException();
+					}
+				catch (campoEmBrancoException e) {
+					valida = false;
+					}
+			   } while (valida);
 			pesquisarLocatario(locAlterar, 2).setNomeCompleto(modNome);
 			break;
 			
 		case "B":
-			String modCpfCnpj = JOptionPane.showInputDialog("Mudar " + pesquisarLocatario(locAlterar, 2).getCpf_cnpj() + " para: ");
+			String modCpfCnpj = "";
+			do {
+				try {
+						modCpfCnpj = JOptionPane.showInputDialog("Mudar " + pesquisarLocatario(locAlterar, 2).getCpf_cnpj() + " para: ");
+						valida = true;
+						throw new campoEmBrancoException();
+					}
+				catch (campoEmBrancoException e) {
+					valida = false;
+					}
+			   } while (valida);
 			pesquisarLocatario(locAlterar, 2).setCpf_cnpj(modCpfCnpj);
 			break;
 			
 		case "C":
-			String modEmail = JOptionPane.showInputDialog("Mudar " + pesquisarLocatario(locAlterar, 2).getEmail() + " para: ");
+			String modEmail = "";
+			do {
+				try {
+						modEmail = JOptionPane.showInputDialog("Mudar " + pesquisarLocatario(locAlterar, 2).getEmail() + " para: ");
+						valida = true;
+						throw new campoEmBrancoException();
+					}
+				catch (campoEmBrancoException e) {
+					valida = false;
+					}
+			   } while (valida);
 			pesquisarLocatario(locAlterar, 2).setEmail(modEmail);
 			break;
 			
@@ -203,13 +301,13 @@ public class GerenciarLocatario {
 		return validar;
 	}
 	
-	public boolean excluir() {
+	public boolean excluir() throws Exception, objetoNaoEncontradoException {
 		String locDeletar = JOptionPane.showInputDialog("Informe o Nome, CPF, CNPJ ou Email:");
 		boolean validar = false;
 		for(Locatario locX : locatario) {
 			if(locX == pesquisarLocatario(locDeletar, 2)) {
 				validar = locatario.remove(locX);
-				JOptionPane.showMessageDialog(null, "Locatario excluida com sucesso!");
+				JOptionPane.showMessageDialog(null, "Locatario excluido com sucesso!");
 			} else {
 				JOptionPane.showMessageDialog(null, "Locatario nao encontrado!");
 			}
@@ -218,10 +316,10 @@ public class GerenciarLocatario {
 		return validar;
 	}
 	
-	public Locatario pesquisarLocatario(String pesquisa, int controle){
+	public Locatario pesquisarLocatario(String pesquisa, int controle) throws objetoNaoEncontradoException {
         boolean validar = false;
         Locatario resposta = null; 
-           for (Locatario locPesquisado : locatario){
+        	  for (Locatario locPesquisado : locatario){
                //Pesquisa por nome
                 if(locPesquisado.getNomeCompleto().equalsIgnoreCase(pesquisa)){
                     resposta = locPesquisado;
@@ -247,11 +345,12 @@ public class GerenciarLocatario {
                     break;
                 }
             }
+
               
        if (controle == 1) {
     	   if(resposta == null){
         	   validar = false;
-        	   JOptionPane.showMessageDialog(null, "Pessoa não encontrada!");
+        	   JOptionPane.showMessageDialog(null, "Pessoa nao encontrada!");
            }else{
         	   JOptionPane.showMessageDialog(null, "Pessoa encontrada!");
            }  
