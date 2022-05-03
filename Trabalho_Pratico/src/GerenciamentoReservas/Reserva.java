@@ -34,6 +34,8 @@ public class Reserva {
 		this.setSeguroTerceiros(seguroTerceiros);
 		this.setSeguroVeiculo(seguroVeiculo);
 		this.setSeguroImposto(seguroImposto);
+		this.locResponsavel = responsavel;
+		this.locCliente = cliente;
 		
 	}
 	public int getIdentificador() {
