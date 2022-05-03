@@ -8,7 +8,6 @@ import CadastroLocatarios.GerenciarLocatario;
 import CadastroLocatarios.Locatario;
 import CadastroLocatarios.PessoaFisica;
 import CadastroLocatarios.PessoaJuridica;
-import Excecoes.objetoNaoEncontradoException;
 import GerenciamentoFrota.GerenciarFrota;
 import GerenciamentoFrota.Veiculo;
 import GerenciamentoReservas.GerenciarReserva;
